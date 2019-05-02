@@ -1,3 +1,7 @@
-npm install
-npm install gulp
-gulp
+Starting project
+
+*npm install
+
+*npm install gulp
+
+*gulp

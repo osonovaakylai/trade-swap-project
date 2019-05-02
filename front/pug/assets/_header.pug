@@ -1,0 +1,105 @@
+header.uk-box-shadow-medium(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar", style="width: 100% !important")
+    .uk-container
+        nav.uk-navbar-container(uk-navbar style="position: relative; z-index: 980;" class="uk-visible@m")
+            .uk-navbar-left
+                ul.uk-navbar-nav 
+                    li
+                        a(href="#categories", uk-scroll) Категории
+                    li
+                        a(href="profile.html") Создать задание
+                    li
+                        a(href="aboutus.html") О нас
+
+            .uk-navbar-center
+                ul.uk-navbar-nav
+                    li.uk-active
+                        a(href="index.html") Trade
+            .uk-navbar-right
+                ul.uk-navbar-nav
+                    li
+                        a(href="#categories") Стать исполнителем
+                    li
+                        a(href="profile.html", uk-toggle="target: #login") Вход
+                        #login.uk-flex-top(uk-modal)
+                            .uk-modal-dialog.uk-modal-body.uk-margin-auto-vertical
+                                button.uk-modal-close-default(type="button", uk-close)
+                                .uk-text-center
+                                    h3 Вход
+                                    form.uk-margin-top(action="")
+                                        .uk-margin.uk-margin-bottom
+                                            .uk-inline(class="uk-width-1-1")
+                                                span.uk-form-icon.uk-form-icon-flip(uk-icon="icon: user")
+                                                input.uk-input(type="mail" , placeholder="Email")
+                                        .uk-margin.uk-margin-bottom
+                                            .uk-inline(class="uk-width-1-1")
+                                                span.uk-form-icon.uk-form-icon-flip(uk-icon="icon: lock") 
+                                                input.uk-input(type="password", placeholder="Пароль")
+                                        .uk-grid.uk-margin-bottom(class="uk-child-width-1-2@s", uk-grid)
+                                            div
+                                                button.uk-button.uk-button-default.fb(type="submit") Войти через <span uk-icon="icon: facebook"></span>
+                                            div
+                                                button.uk-button.uk-button-default.gp(type="submit") Войти через <span uk-icon="icon: google-plus"></span>
+                                        button.uk-button.uk-button-default.log-in.uk-box-shadow-hover-large(type="submit") Войти
+                                    a.forget-password.uk-margin.uk-margin-bottom.uk-button.uk-button-text(href="") Забыли пароль?
+                                    <br>
+                                    a.have-not-acc.uk-button.uk-button-text(href="registration.html") Нет аккаунта?
+                    li
+                        a(href="", uk-toggle="target: #register") Регистрация
+                        #register.uk-flex-top(uk-modal)
+                            .uk-modal-dialog.uk-modal-body.uk-margin-auto-vertical
+                                button.uk-modal-close-default(type="button", uk-close)
+                                .uk-text-center
+                                    h3 Регистрация
+                                    form.uk-margin-top(action="")
+                                        .uk-margin.uk-margin-bottom
+                                            .uk-inline(class="uk-width-1-1")
+                                                span.uk-form-icon.uk-form-icon-flip(uk-icon="icon: user")
+                                                input.uk-input(type="mail" , placeholder="Имя Фамилия*")
+                                        .uk-margin.uk-margin-bottom
+                                            .uk-inline(class="uk-width-1-1")
+                                                span.uk-form-icon.uk-form-icon-flip(uk-icon="icon: mail")
+                                                input.uk-input(type="mail" , placeholder="Email*")
+                                        .uk-margin.uk-margin-bottom
+                                            .uk-inline(class="uk-width-1-1")
+                                                span.uk-form-icon.uk-form-icon-flip(uk-icon="icon: lock") 
+                                                input.uk-input(type="password", placeholder="Пароль*")
+                                        .uk-margin.uk-margin-bottom
+                                            .uk-inline(class="uk-width-1-1")
+                                                span.uk-form-icon.uk-form-icon-flip(uk-icon="icon: lock") 
+                                                input.uk-input(type="password", placeholder="Пароль (еще раз)*")
+                                        .uk-grid.uk-margin-bottom(class="uk-child-width-1-2@s", uk-grid)
+                                            div
+                                                button.uk-button.uk-button-default.fb(type="submit") Войти через <span uk-icon="icon: facebook"></span>
+                                            div
+                                                button.uk-button.uk-button-default.gp(type="submit") Войти через <span uk-icon="icon: google-plus"></span>
+                                        button.uk-button.uk-button-default.log-in.uk-box-shadow-hover-large(type="submit") Регистрация
+                                    a.forget-password.uk-margin.uk-margin-bottom.uk-button.uk-button-text(href="") Уже зарегистрированы?
+    .mobile(class="uk-hidden@m")
+        button.uk-button.uk-button-default.list-btn(type='button', uk-icon='list')
+        div(uk-dropdown='mode: click;pos: bottom-justify')
+            ul.uk-nav.uk-dropdown-nav
+                li
+                    a(href="#categories", uk-scroll)
+                        span.icon(uk-icon='icon: thumbnails')
+                        |Категории
+                li
+                    a(href="profile.html")
+                    span.icon(uk-icon='icon: file-edit') 
+                    |Создать задание
+                li
+                    a(href="aboutus.html")
+                    span.icon(uk-icon='users') 
+                    |О нас
+                li
+                    a(href="#categories")
+                        span.icon(uk-icon='comment')
+                        |Стать исполнителем
+                li
+                    a(href="profile.html", uk-toggle="target: #login")
+                    span.icon(uk-icon='sign-in') 
+                    |Вход
+                li
+                    a(href="", uk-toggle="target: #register")
+                    span.icon(uk-icon='cog') 
+                    |Регистрация                                        
+

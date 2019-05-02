@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Page description">
+    <meta name="keywords" content="page, keywords">
+    <meta name="theme-color" content="#000000">
+    <meta name="copyright" content="Author">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+    <meta name="apple-mobile-web-app-title" content="Application Name">
+    <meta name="msapplication-TileImage" content="img/favicons/144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="shortcut icon" href="img/favicons/64x64.png" type="image/png">
+    <link rel="icon" href="img/favicons/152x152.png" type="image/png" sizes="152x152">
+    <link rel="icon" href="img/favicons/256x256.png" type="image/png" sizes="256x256">
+    <link rel="icon" href="img/favicons/512x512.png" type="image/png" sizes="512x512">
+    <link rel="apple-touch-icon" href="img/favicons/152x152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="img/favicons/256x256.png" sizes="256x256">
+    <link rel="apple-touch-icon" href="img/favicons/512x512.png" sizes="512x512">
+    <link rel="manifest" href="manifest.json">
+  </head>
+  <body>
+    <header class="uk-box-shadow-medium" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar" style="width: 100% !important;">
+      <div class="uk-container">
+        <nav class="uk-navbar-container uk-visible@m" uk-navbar style="position: relative; z-index: 980;">
+          <div class="uk-navbar-left">
+            <ul class="uk-navbar-nav"> 
+              <li><a href="#categories" uk-scroll>Категории</a></li>
+              <li><a href="profile.html">Создать задание</a></li>
+              <li><a href="aboutus.html">О нас</a></li>
+            </ul>
+          </div>
+          <div class="uk-navbar-center">
+            <ul class="uk-navbar-nav">
+              <li class="uk-active"><a href="index.html">Trade</a></li>
+            </ul>
+          </div>
+          <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav">
+              <li><a href="#categories">Стать исполнителем</a></li>
+              <li><a href="profile.html" uk-toggle="target: #login">Вход</a>
+                <div class="uk-flex-top" id="login" uk-modal>
+                  <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+                    <button class="uk-modal-close-default" type="button" uk-close></button>
+                    <div class="uk-text-center">
+                      <h3>Вход</h3>
+                      <form class="uk-margin-top" action="">
+                        <div class="uk-margin uk-margin-bottom">
+                          <div class="uk-inline uk-width-1-1"><span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: user"></span>
+                            <input class="uk-input" type="mail" placeholder="Email">
+                          </div>
+                        </div>
+                        <div class="uk-margin uk-margin-bottom">
+                          <div class="uk-inline uk-width-1-1"><span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"> </span>
+                            <input class="uk-input" type="password" placeholder="Пароль">
+                          </div>
+                        </div>
+                        <div class="uk-grid uk-margin-bottom uk-child-width-1-2@s" uk-grid>
+                          <div>
+                            <button class="uk-button uk-button-default fb" type="submit">Войти через <span uk-icon="icon: facebook"></span></button>
+                          </div>
+                          <div>
+                            <button class="uk-button uk-button-default gp" type="submit">Войти через <span uk-icon="icon: google-plus"></span></button>
+                          </div>
+                        </div>
+                        <button class="uk-button uk-button-default log-in uk-box-shadow-hover-large" type="submit">Войти</button>
+                      </form><a class="forget-password uk-margin uk-margin-bottom uk-button uk-button-text" href="">Забыли пароль?</a><br><a class="have-not-acc uk-button uk-button-text" href="registration.html">Нет аккаунта?</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li><a href="" uk-toggle="target: #register">Регистрация</a>
+                <div class="uk-flex-top" id="register" uk-modal>
+                  <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+                    <button class="uk-modal-close-default" type="button" uk-close></button>
+                    <div class="uk-text-center">
+                      <h3>Регистрация</h3>
+                      <form class="uk-margin-top" action="">
+                        <div class="uk-margin uk-margin-bottom">
+                          <div class="uk-inline uk-width-1-1"><span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: user"></span>
+                            <input class="uk-input" type="mail" placeholder="Имя Фамилия*">
+                          </div>
+                        </div>
+                        <div class="uk-margin uk-margin-bottom">
+                          <div class="uk-inline uk-width-1-1"><span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: mail"></span>
+                            <input class="uk-input" type="mail" placeholder="Email*">
+                          </div>
+                        </div>
+                        <div class="uk-margin uk-margin-bottom">
+                          <div class="uk-inline uk-width-1-1"><span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"> </span>
+                            <input class="uk-input" type="password" placeholder="Пароль*">
+                          </div>
+                        </div>
+                        <div class="uk-margin uk-margin-bottom">
+                          <div class="uk-inline uk-width-1-1"><span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"> </span>
+                            <input class="uk-input" type="password" placeholder="Пароль (еще раз)*">
+                          </div>
+                        </div>
+                        <div class="uk-grid uk-margin-bottom uk-child-width-1-2@s" uk-grid>
+                          <div>
+                            <button class="uk-button uk-button-default fb" type="submit">Войти через <span uk-icon="icon: facebook"></span></button>
+                          </div>
+                          <div>
+                            <button class="uk-button uk-button-default gp" type="submit">Войти через <span uk-icon="icon: google-plus"></span></button>
+                          </div>
+                        </div>
+                        <button class="uk-button uk-button-default log-in uk-box-shadow-hover-large" type="submit">Регистрация</button>
+                      </form><a class="forget-password uk-margin uk-margin-bottom uk-button uk-button-text" href="">Уже зарегистрированы?</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="mobile uk-hidden@m">
+        <button class="uk-button uk-button-default list-btn" type="button" uk-icon="list"></button>
+        <div uk-dropdown="mode: click;pos: bottom-justify">
+          <ul class="uk-nav uk-dropdown-nav">
+            <li><a href="#categories" uk-scroll><span class="icon" uk-icon="icon: thumbnails"></span>Категории</a></li>
+            <li><a href="profile.html"></a><span class="icon" uk-icon="icon: file-edit"> </span>Создать задание</li>
+            <li><a href="aboutus.html"></a><span class="icon" uk-icon="users"> </span>О нас</li>
+            <li><a href="#categories"><span class="icon" uk-icon="comment"></span>Стать исполнителем</a></li>
+            <li><a href="profile.html" uk-toggle="target: #login"></a><span class="icon" uk-icon="sign-in"> </span>Вход</li>
+            <li><a href="" uk-toggle="target: #register"></a><span class="icon" uk-icon="cog"> </span>Регистрация                                        </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="breadcrumb">
+      <section class="contacts_block">
+        <div class="uk-container">
+          <div class="uk-grid" uk-grid="">
+            <div class="uk-width-expand@m uk-width-1-2@s">
+              <p>НАШИ КОНТАКТЫ</p>
+            </div>
+            <div class="uk-width-auto@m uk-width-1-2@s">
+              <ul class="uk-breadcrumb">
+                <li><a href="../index.html">Главная</a></li>
+                <li><span>Контакты</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- MAP-->
+    <div class="full_width" id="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2925.7745796263466!2d74.57284741513529!3d42.83537527915779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389ec9ebd50abdf1%3A0x14ce488dddb2fbdb!2zS8SxcmfEsXppc3Rhbi1Uw7xya2l5ZSBNYW5hcyDDnG5pdmVyc2l0ZXNp!5e0!3m2!1str!2skg!4v1520056062855" width="1349" height="250" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+    <div class="contact">
+      <div class="uk-container">
+        <div class="uk-margin-large-top uk-margin-xlarge-bottom uk-child-width-1-2@l uk-child-width-1-1@m uk-child-width-1-1@s uk-child-width-1-1" uk-grid="">
+          <div>
+            <h3>ПИШИТЕ НАМ</h3>
+            <!-- CONTACT FORM-->
+            <div class="contact_form top_form"></div>
+            <div id="note"></div>
+            <div id="fields">
+              <form id="ajax-contact-form" action=""></form>
+              <input type="text" name="name" value="" placeholder="Имя Фамилия*">
+              <input type="text" name="email" value="" placeholder="Email*">
+              <input type="text" name="subject" value="" placeholder="Тема*">
+              <textarea name="message" placeholder="Сообщение*"></textarea><br><a class="uk-button uk-button-default contact__btn__clear" href="#">ОЧИСТИТЬ</a><a class="uk-button uk-button-default contact__btn__send" href="#">ОТПРАВИТЬ!</a>
+            </div>
+          </div>
+          <div class="contact__right">
+            <h3>КОНТАКТЫ</h3>
+            <p class="contact__p">
+               Мы будем рады ответить на все ваши вопросы,<br>предложения или жалобы </p>
+            <h3 class="contact__h3">СЛУЖБА ПОДДЕРЖКИ</h3>
+            <p class="contact__p">
+               Телефон службы поддержки: 0(550) 555 555<br>Поддержка пользователей работает с 9:00 до 21:00, 24/7     </p>
+            <!-- CONTACT INFO-->
+            <h3 class="contact__h3">МЫ В СОЦИАЛЬНЫХ СЕТЯХ</h3>
+            <ul class="list4 contacts_info"></ul>
+            <li><a href="" uk-icon="location"></a><span class="contact__icon">г. Бишкек, бульвар Эркиндик, 10 </span></li>
+            <li><a href="" uk-icon="mail"></a><span class="contact__icon">office@trade.kg</span></li>
+            <li><a href="" uk-icon="twitter"></a><span class="contact__icon">twitter.com/trade.kg</span></li>
+            <li><a href="" uk-icon="facebook"></a><span class="contact__icon">facebook.com/trade.kg</span></li>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="uk-container">
+        <div class="top-line">
+          <nav class="uk-navbar-container uk-navbar-transparent uk-navbar uk-navbar-menu" uk-navbar style="position: relative;">
+            <div class="uk-navbar-left">
+              <ul class="uk-navbar-nav">
+                <li class="uk-active"><a class="main" href="">Главная</a></li>
+                <li><a href="">Категории</a></li>
+                <li><a href="">О нас</a></li>
+                <li><a href="">Регистрация</a></li>
+                <li><a href="">Вход        </a></li>
+                <li><a href="contact.html">Контакты</a></li>
+              </ul>
+            </div>
+            <div class="uk-navbar-right navbar-right-mod">
+              <ul class="uk-navbar-nav">
+                <li><a href="">Оставайся на связи</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <hr class="navbar__hr__m">
+        <hr class="navbar__hr__s">
+        <div class="middle-line">
+          <nav class="uk-navbar-container uk-navbar-transparent uk-navbar" uk-navbar style="position: relative;">
+            <div class="uk-navbar-left">
+              <ul class="footer__navbar">
+                <li><a class="footer__navbar__a" href=""><span class="icon" uk-icon="icon: home"> </span><span>Кыргызстан, город Бишкек, КТУМ</span></a></li>
+                <li>              <a class="footer__navbar__a" href="tel: +(996)557201255"><span class="icon" uk-icon="icon: receiver"> </span><span>(+996)557-201-255</span></a><a class="footer__navbar__a" href="mailto: begi.asanbekova@gmail.com"><span class="icon" uk-icon="icon: mail"> </span><span>begi.asanbekova@gmail.com </span></a></li>
+              </ul>
+            </div>
+            <div class="uk-navbar-right navbar-right-pad">  <a class="uk-icon-button uk-margin-small-right" href="" uk-icon="twitter"></a><a class="uk-icon-button uk-margin-small-right" href="" uk-icon="facebook"></a><a class="uk-icon-button uk-margin-small-right" href="" uk-icon="instagram"></a><a class="uk-icon-button uk-margin-small-right" href="" uk-icon="linkedin"></a><a class="uk-icon-button" href="" uk-icon="google-plus"></a></div>
+          </nav>
+        </div>
+        <hr class="footer__hr">
+        <div class="bottom-line footer__bottom">
+          <p>Trade.kg &copy; 2018 Все права защищены</p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/libs.min.js"></script>
+    <script src="js/common.min.js"></script>
+  </body>
+</html>

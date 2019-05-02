@@ -1,0 +1,160 @@
+doctype
+html(lang="ru")
+	head
+		include assets/_metas.pug
+		include assets/_links.pug
+		link(rel="stylesheet", href="stylesheets/style.min.css")
+	body
+		include assets/_header.pug
+		section.banner
+			div.uk-position-relative.uk-visible-toggle.uk-light(uk-slideshow="autoplay: true, autoplay-interval: 3000")
+				ul.uk-slideshow-items
+					li
+						.uk-position-cover.uk-animation-kenburns.uk-animation-reverse.uk-transform-origin-center-center.uk-background-cover.uk-height-large-l.uk-panel.uk-flex.uk-flex-center.uk-flex-middle(style = "background-image: url(images/jpg/banner.jpg); ")
+							.banner-text.uk-text-center
+								h1.common-header TRADE  <br> сайт обмена услугами
+								a.uk-box-shadow-hover-large(href="#create", uk-scroll) Создать задание <i class="zmdi zmdi-assignment-o"></i>
+								a.uk-box-shadow-hover-large(href="#perform", uk-scroll) Стать исполнителем <i class="zmdi zmdi-assignment-account"></i>
+					li
+						.uk-position-cover.uk-animation-kenburns.uk-animation-reverse.uk-transform-origin-center-center.uk-background-cover.uk-height-large-l.uk-panel.uk-flex.uk-flex-center.uk-flex-middle(style = "background-image: url(images/jpg/banner2.jpg); ")
+							.banner-text.uk-text-center
+								h1.common-header TRADE  <br> сайт обмена услугами
+								a.uk-box-shadow-hover-large(href="") Создать задание <i class="zmdi zmdi-assignment-o"></i>
+								a.uk-box-shadow-hover-large(href="") Стать исполнителем <i class="zmdi zmdi-assignment-account"></i>
+					li
+						.uk-position-cover.uk-animation-kenburns.uk-animation-reverse.uk-transform-origin-center-center.uk-background-cover.uk-height-large-l.uk-panel.uk-flex.uk-flex-center.uk-flex-middle(style = "background-image: url(images/jpg/banner3.jpg); ")
+							.banner-text.uk-text-center
+								h1.common-header TRADE  <br> сайт обмена услугами
+								a.uk-box-shadow-hover-large(href="") Создать задание <i class="zmdi zmdi-assignment-o"></i>
+								a.uk-box-shadow-hover-large(href="") Стать исполнителем <i class="zmdi zmdi-assignment-account"></i>
+				a.uk-position-center-left.uk-position-small.uk-hidden-hover(href = "#", uk-slidenav-previous, uk-slideshow-item="previous")
+				a.uk-position-center-right.uk-position-small.uk-hidden-hover(href = "#", uk-slidenav-next, uk-slideshow-item="next")
+		section.categories.uk-margin-top(id="categories")
+			.heading.uk-text-center.uk-margin-medium-bottom
+				h2.com-header Категории услуг:
+			.uk-container.uk-container-small.uk-margin-large-top
+				.categories-list.uk-grid.uk-grid-small.uk-grid-match(uk-grid, class = "uk-child-width-1-4@s")
+					each val in category
+						.categories-list-type
+							span.uk-text-center.uk-box-shadow-hover-large
+								i(class=""+val.value.style)
+								p #{val.value.name}
+		section.how-it-works.uk-margin-large-top
+			.uk-container
+				.heading.uk-text-center
+					h2.com-header Как это работает?
+					p.common-text -- Это работает очень просто !
+				.uk-grid.uk-flex-middle.uk-margin-large-top(uk-grid, class= "uk-child-width-1-2@s")
+					.about
+						.uk-grid(uk-grid, class="uk-child-width-1-1")
+							.how-about.uk-grid.uk-grid-match.uk-margin-medium-bottom(uk-grid)
+								.number(class="uk-width-auto@s")
+									span 1
+								.text(class = "uk-width-expand@s")
+									b.common-text Создать задание
+									span.common-text Вы размещаете задание на нашем сайте в разделе "Услуги".
+							.how-about.uk-grid.uk-grid-match.uk-margin-medium-bottom(uk-grid)
+								.number(class="uk-width-auto@s")
+									span 2
+								.text(class = "uk-width-expand@s")
+									b.common-text Стать исполнителем
+									span.common-text Вы находите подходящую вам услугу и предоставляете свою взамен.
+							.how-about.uk-grid.uk-grid-match.uk-margin-medium-bottom(uk-grid)
+								.number(class="uk-width-auto@s", id="create")
+									span 3
+								.text(class = "uk-width-expand@s")
+									b.common-text Исполнить обмен
+									span.common-text Вы связываетесь с исполнителем вашего задания и делитесь услугами друг друга.	
+					video(controls, playsinline, uk-video="automute: true")
+						source(src="video/how-it-works.mp4", type="video/mp4")
+		section.barter.uk-margin-large-top
+			.uk-container
+				.uk-grid.uk-grid-match(class="uk-child-width-1-3@s")
+					.star
+						a(href="#create", uk-toggle)
+							img(src="images/png/create.png", alt="")
+							<br>
+							span.common-text.uk-button-text Создать задание
+                            
+						//- a.uk-button.uk-button-default(href="#mod", uk-toggle) 
+						#create.uk-flex-top(uk-modal)
+							.uk-modal-dialog.uk-modal-body.uk-margin-auto-vertical
+								button.uk-modal-close-default(type="button", uk-close)
+								.uk-text-center
+									h3 Заполните заявку
+									if user
+										form.uk-margin-top(action="/ad" method="post")
+											.uk-margin.uk-margin-bottom
+												.uk-inline(class="uk-width-1-1")
+													select.uk-select(name="category")
+														option(value="0") Выберите категорию
+														each cat in category
+															option(value=""+cat.id) #{cat.value.name}
+											.uk-margin.uk-margin-bottom
+												.uk-inline(class="uk-width-1-1")
+													span.uk-form-icon.uk-form-icon-flip(uk-icon="icon: pencil")
+													input.uk-input(type="text" ,name="ad_name", placeholder="ТЕМА...")
+											.uk-margin.uk-margin-bottom
+												.uk-inline(class="uk-width-1-1")
+													span.uk-form-icon.uk-form-icon-flip(uk-icon="icon: pencil")
+													textarea.uk-input(name="ad_body", placeholder="Описание...")
+											button.uk-button.uk-button-default.log-in.uk-box-shadow-hover-large(type="submit") Создать
+											
+												
+									else
+										form.uk-margin-top(action="/ad" method="post")
+									
+											.uk-margin.uk-margin-bottom
+												.uk-inline(class="uk-width-1-1")
+													span.uk-form-icon.uk-form-icon-flip(uk-icon="icon: mail")
+													input.uk-input(type="mail" , placeholder="Email*")
+											.uk-margin.uk-margin-bottom
+												.uk-inline(class="uk-width-1-1")
+													span.uk-form-icon.uk-form-icon-flip(uk-icon="icon: lock") 
+													input.uk-input(type="password", placeholder="Пароль*")
+											.uk-margin.uk-margin-bottom
+												.uk-inline(class="uk-width-1-1")
+													span.uk-form-icon.uk-form-icon-flip(uk-icon="icon: lock") 
+													input.uk-input(type="password", placeholder="Пароль (еще раз)*")
+											a.forget-password.uk-margin.uk-margin-bottom.uk-button.uk-button-text(href="") Уже зарегистрированы?
+											button.uk-button.uk-button-default.log-in.uk-box-shadow-hover-large(type="submit") Регистрация
+										
+
+					.star
+						a(href="category.html")
+							img(src="images/png/task.png", alt="")
+							<br>
+							span.common-text.uk-button-text Стать исполнителем
+					.star
+						a(href="/about")
+							img(src="images/png/about.png", alt="")
+							<br>
+							span.common-text.uk-button-text О нас
+		section.tasks.uk-margin-large-top
+			.uk-container
+				.heading.uk-text-center
+					h2.com-header Текущие задания
+				.slider.uk-margin-large-top(uk-slider)
+					.uk-position-relative
+						.uk-slider-container.uk-light.uk-visible-toggle
+							ul.uk-slider-items.uk-grid.uk-grid-match(class="uk-child-width-1-2 uk-child-width-1-4@m", uk-grid)
+								each ad in ads
+									li
+										.uk-panel
+											.uk-card.uk-card-body
+												.image.uk-card-media-top.uk-border-circle.uk-position-relative.uk-cover-container
+													img(src=ad.value.imageURL, alt="", uk-cover)
+												.text.uk-text-center
+													h3.common-text #{ad.value.ad}
+													p.common-text #{cat[ad.value.category].name}
+												.time.uk-text-center
+													//- img(src="images/png/date.png", alt="")
+													span #{ad.value.timestamp}
+											.watch.uk-card-footer
+												a(href="profile_view.html") Посмотреть
+						a.uk-position-center-left-out.uk-position-small(href="#", uk-slidenav-previous, uk-slider-item="previous")
+						a.uk-position-center-right-out.uk-position-small(href="#", uk-slidenav-next, uk-slider-item="next")
+		include assets/_footer.pug
+		include assets/_scripts.pug
+		
+			

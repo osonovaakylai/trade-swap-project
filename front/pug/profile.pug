@@ -1,0 +1,152 @@
+doctype
+html(lang="ru")
+    head
+        include assets/_metas.pug
+        include assets/_links.pug
+    body
+        include assets/_header.pug
+
+        .uk-container
+            h2.com-header.uk-margin-large-top.uk-text-center.top_del Личный кабинет
+            .profile.uk-margin-small-top.uk-margin-large-bottom(uk-grid='')
+                div.profile__left
+                    .uk-width-2-6
+                        .profile__img
+                            img(src="img/jpg/team_item.jpg", alt="")  
+                        div.profile__desc.profile__desc__choose.uk-text-center(uk-form-custom='')
+                            input(type='file') 
+                            |Выберите файл
+                            
+                div.profile__center
+                    .uk-width-3-6
+                        ul.uk-tab(data-uk-tab="{connect:'#my-id2'}")
+                            li.uk-active
+                                a.profile__tab__head(href='') Настройки
+                            li
+                                a.profile__tab__head(href='') Как видят мой профиль
+                            
+                        ul#my-id2.uk-switcher.uk-margin.profile__ul
+                            li.profile__tab 
+                                .contact_form.top_form
+                                #note
+                                #fields
+                                    form#ajax-contact-form(action='')
+                                    input(type='text', name='name', value='', placeholder='Имя*')
+                                    input(type='text', name='surname', value='', placeholder=' Фамилия*')
+                                    br 
+                                    input.phone-mask(type='text', name='subject', value='', placeholder='Телефон*', style="width: 470px")   
+                                    br
+                                    .uk-margin-small.uk-grid-small.uk-child-width-auto.uk-grid
+                                        label.radio_text
+                                            input.uk-radio(type='radio', name='radio2', checked='')
+                                            | &nbsp &nbsp Женщина
+
+                                        label.radio_text
+                                            input.uk-radio(type='radio', name='radio2')
+                                            | &nbsp &nbsp Мужчина
+                                          
+                                    input.uk-input.uk-input-default(type='date', name='subject', value='', placeholder="Date", style="width: 512px; margin-bottom: 5px;" ::-webkit-input-placeholder="color: red")
+                                    br
+                                    input.phone-mask(type='text', name='subject', value='', placeholder='Адрес', style="width: 470px")   
+                                    br
+                                    textarea.phone-mask(name='message', placeholder='Обо мне*', style="width: 470px")
+                                    br
+                                    a.uk-button.uk-button-default.contact__btn__clear(href='#') ОБНОВИТЬ
+                                    
+                                    p Изменить пароль
+                                    input.phone-mask(type='text', name='subject', value='', placeholder='Текущий пароль*', style="width: 470px")
+                                    br
+                                    input(type='text', name='name', value='', placeholder='Новый пароль*')
+                                    input(type='text', name='email', value='', placeholder='Повторить новый пароль*')
+                                    br
+                                    a.uk-button.uk-button-default.contact__btn__clear(href='#', style="margin-top: 8px") СОХРАНИТЬ
+
+                            li.profile__tab 
+                                ul.uk-list.profile__view
+                                    li.profile__view__first Лариса Федоровна
+                                    li
+                                        a.profile__view__space(href='', uk-icon='user')
+                                        | Проверены персональные данные
+                                    li 
+                                        a.profile__view__space(href='', uk-icon='check')
+                                        |Подтвержден опыт работы
+                                    li.profile__view__title
+                                            |Подтвержденные контакты
+                                    li 
+                                        a.profile__view__space(href='', uk-icon='mail')
+                                        |xxxxxxxxxxxx@mail.ru
+                                    li 
+                                        a.profile__view__space(href='', uk-icon='receiver')
+                                        |+996 ( xxx ) xxx xxx
+                                    li.profile__view__space 
+                                        i.zmdi.zmdi-cake 
+                                        | &nbsp &nbsp 5/05/2014
+                                    li.profile__view__space
+                                        i.zmdi.zmdi-male-female 
+                                        | &nbsp &nbsp Женщина
+                                    
+                            
+                div
+                    .uk-width-1-6.profile__right
+                        button.uk-button.uk-button-default.profile__fb(type="submit")  <span uk-icon="icon: facebook"></span>                     
+                        button.uk-button.uk-button-default.profile__google(type="submit")  <span uk-icon="icon: google-plus"></span> 
+                        button.uk-button.uk-button-default.profile__twitter(type="submit")  <span uk-icon="icon: twitter"></span> 
+        section.items.uk-margin-large-bottom
+            .uk-container
+                .uk-grid.uk-grid-match(class="uk-child-width-1-3@s")
+                    .star
+                        a(href="#create", uk-toggle)  
+                            img(src="img/png/create.png", alt="create task")
+                            br
+                            span.common-text.uk-button-text Создать задание
+                        #create.uk-flex-top(uk-modal)    
+                            .uk-modal-dialog.uk-modal-body.uk-margin-auto-vertical
+                                button.uk-modal-close-default(type="button", uk-close)
+                                .uk-text-center
+                                    h3 Заполните заявку
+                                    form.uk-margin-top(action="")
+                                        .uk-margin.uk-margin-bottom
+                                            .uk-inline(class="uk-width-1-1")
+                                                select.uk-select
+                                                    option(value="") Выберите категорию
+                                                    option(value="4") Медицина
+                                                    option(value="1") Образование
+                                                    option(value="3") Ремонт личных вещей     
+                                                    option(value="5") Работы по дому
+                                                    option(value="6") Организация мероприятий
+                                                    option(value="8") Профессиональные услуги
+                                                    option(value="9") Ремонт авто
+                                                    option(value="10") Электроприборы
+                                                    option(value="11") Фото, видео, аудио
+                                                    option(value="12") Спорт
+                                                    option(value="13") Строительство и ремонт
+                                                    option(value="14") Красота
+                                        .uk-margin.uk-margin-bottom
+                                            .uk-inline(class="uk-width-1-1")
+                                                textarea.uk-textarea(name='message', placeholder='Описание задания', rows="5")
+                                        .uk-margin.uk-margin-bottom
+                                            .uk-inline(class="uk-width-1-1")
+                                                span.uk-form-icon.uk-form-icon-flip(uk-icon="icon: lock") 
+                                                input.uk-input.uk-input-default(type="date", name='subject', value='', placeholder="Date", style="width: 512px; margin-bottom: 5px;" )
+                                        .uk-margin.uk-margin-bottom
+                                            .uk-inline(class="uk-width-1-1")
+                                                span.uk-form-icon.uk-form-icon-flip(uk-icon="icon: lock") 
+                                                input.uk-input(type="password", placeholder="Пароль")
+                                    label.uk-margin.uk-margin-top
+                                        input.uk-checkbox(type="chechbox")
+                                        |  Обсуждение задания доступно всем
+                                    button.uk-button.uk-margin-top.uk-button-default.log-in.uk-box-shadow-hover-large(type="submit", style="background: #f82f22; color: #fff; border-radius: 3px") СОЗДАТЬ
+                                    
+
+                    .star
+                        a(href="category.html")
+                            img(src="img/png/task.png", alt="")
+                            <br>
+                            span.common-text.uk-button-text Стать исполнителем
+                    .star
+                        a(href="aboutus.html")
+                            img(src="img/png/about.png", alt="")
+                            <br>
+                            span.common-text.uk-button-text О нас
+        include assets/_footer.pug
+        include assets/_scripts.pug

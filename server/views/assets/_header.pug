@@ -1,0 +1,83 @@
+header.uk-box-shadow-medium(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar")
+    .uk-container
+        nav.uk-navbar-container(uk-navbar style="position: relative; z-index: 980;")
+            .uk-navbar-left
+                ul.uk-navbar-nav
+                    li
+                        a(href="#categories", uk-scroll) Категории
+                    li
+                        a(href="#create", uk-toggle) Создать задание
+                    li
+                        a(href="/about") О нас
+
+            .uk-navbar-center
+                ul.uk-navbar-nav
+                    li.uk-active
+                        a(href="/") Trade
+            .uk-navbar-right
+                ul.uk-navbar-nav
+                    li
+                        a(href="#categories") Стать исполнителем
+                    if user
+                        li
+                            a(href="/profile") Личный Кабинет
+                        li
+                            a(id="signOut" href="#") Выйти
+                    else        
+                        li
+                            a(href="#", uk-toggle="target: #login") Вход
+                            #login.uk-flex-top(uk-modal)
+                                .uk-modal-dialog.uk-modal-body.uk-margin-auto-vertical
+                                    button.uk-modal-close-default(type="button", uk-close)
+                                    .uk-text-center
+                                        h3 Вход
+                                        form.uk-margin-top(name="formIn")
+                                            .uk-margin.uk-margin-bottom
+                                                .uk-inline(class="uk-width-1-1")
+                                                    span.uk-form-icon.uk-form-icon-flip(uk-icon="icon: user")
+                                                    input.uk-input(name="email" type="mail" , placeholder="Email")
+                                            .uk-margin.uk-margin-bottom
+                                                .uk-inline(class="uk-width-1-1")
+                                                    span.uk-form-icon.uk-form-icon-flip(uk-icon="icon: lock") 
+                                                    input.uk-input(name="pass" type="password", placeholder="Пароль")
+                                            .uk-grid.uk-margin-bottom(class="uk-child-width-1-2@s", uk-grid)
+                                                div
+                                                    button.uk-button.uk-button-default.fb(type="submit" id="signInFacebook") Войти через <span uk-icon="icon: facebook"></span>
+                                                div
+                                                    button.uk-button.uk-button-default.gp(type="submit" id="signInGoogle") Войти через <span uk-icon="icon: google-plus"></span>
+                                            button.uk-button.uk-button-default.log-in.uk-box-shadow-hover-large(type="submit" id="signIn") Войти
+                                        a.forget-password.uk-margin.uk-margin-bottom.uk-button.uk-button-text(href="") Забыли пароль?
+                                        <br>
+                                        a.have-not-acc.uk-button.uk-button-text(uk-toggle="target: #register") Нет аккаунта?
+                        li
+                            a(href="", uk-toggle="target: #register") Регистрация
+                            #register.uk-flex-top(uk-modal)
+                                .uk-modal-dialog.uk-modal-body.uk-margin-auto-vertical
+                                    button.uk-modal-close-default(type="button", uk-close)
+                                    .uk-text-center
+                                        h3 Регистрация
+                                        form.uk-margin-top(name="formUp")
+                                            .uk-margin.uk-margin-bottom
+                                                .uk-inline(class="uk-width-1-1")
+                                                    span.uk-form-icon.uk-form-icon-flip(uk-icon="icon: user")
+                                                    input.uk-input(name="name" type="text" , placeholder="Имя*")
+                                            .uk-margin.uk-margin-bottom
+                                                .uk-inline(class="uk-width-1-1")
+                                                    span.uk-form-icon.uk-form-icon-flip(uk-icon="icon: mail")
+                                                    input.uk-input(name="email" type="mail" , placeholder="Email*")
+                                            .uk-margin.uk-margin-bottom
+                                                .uk-inline(class="uk-width-1-1")
+                                                    span.uk-form-icon.uk-form-icon-flip(uk-icon="icon: lock") 
+                                                    input.uk-input(name="pass" type="password", placeholder="Пароль*")
+                                            .uk-margin.uk-margin-bottom
+                                                .uk-inline(class="uk-width-1-1")
+                                                    span.uk-form-icon.uk-form-icon-flip(uk-icon="icon: lock") 
+                                                    input.uk-input(name="confirmPass" type="password", placeholder="Пароль (еще раз)*")
+                                            .uk-grid.uk-margin-bottom(class="uk-child-width-1-2@s", uk-grid)
+                                                div
+                                                    button.uk-button.uk-button-default.fb(type="submit" id="signInFacebook") Войти через <span uk-icon="icon: facebook"></span>
+                                                div
+                                                    button.uk-button.uk-button-default.gp(type="submit" id="signInGoogle") Войти через <span uk-icon="icon: google-plus"></span>
+                                            button.uk-button.uk-button-default.log-in.uk-box-shadow-hover-large(type="submit" id="signUp") Регистрация
+                                        a.forget-password.uk-margin.uk-margin-bottom.uk-button.uk-button-text(uk-toggle="target: #login") Уже зарегистрированы?
+

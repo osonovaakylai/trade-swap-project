@@ -1,0 +1,956 @@
+// libraries
+
+@import '_libs'
+
+//componets
+
+@import 'componets/breadcrumb'
+@import 'componets/button'
+@import 'componets/modal'
+
+// assets
+
+@import 'assets/_fonts'
+@import 'assets/_vars'
+@import 'assets/_keyframes-animate'
+@import 'assets/header'
+@import 'assets/_footer'
+
+// style
+body
+    background-image: url(../img/jpg/bg-img1.jpg)
+    font-size: 18px
+    color: $font-gray
+    font-family: "Myriad Pro", sans-serif
+    outline: none   
+
+.common-text
+    font-size: 18px
+    color: $font-gray
+    font-family: "Myriad Pro", sans-serif
+.common-header
+    font-size: 96px
+    color: $red
+    font-family: "Pacifico-Regular"
+.com-header
+    font-family: "Myriad Pro", sans-serif
+    font-size: 40px
+    color: $font-gray
+.uk-height-large-l
+    height: 720px
+// --- Главная ---
+section.banner
+    background-size: cover
+.banner-text
+    background-color: rgba(255, 255, 255, 0.7)
+    margin-top: 80px
+    border-radius: 5px
+    padding: 40px 60px 60px 60px
+    
+    .common-header
+        font-size: 42px
+        color: $font-gray
+        font-family: "Myriad Pro", sans-serif
+        text-transform: uppercase
+        margin-bottom: 50px
+    .common-text
+        color: $font
+        font-size: 30px
+    a
+        display: inline-block
+        width: 200px
+        padding: 10px
+        margin-right: 5px
+        border: 2px solid $red
+        color: $white
+        font-family: "Philosopher-Regular"
+        transition: 0.4s
+        border-radius: 5px
+        background-color: $red
+        &:hover                              
+            text-decoration: none
+        i
+            margin-left: 5px                                
+    a.uk-position-center-left
+        svg
+            color: $red
+            width: 24px
+            height: 34px
+    a.uk-position-center-right
+        svg
+            color: $red
+            width: 24px
+            height: 34px
+section.how-it-works
+    .uk-container
+        .heading
+            p
+                font-size: 24px
+        .uk-grid
+            .about
+                .uk-grid
+                    .how-about
+                        .number
+                            span
+                                border-radius: 50%
+                                background-color: $red
+                                width: 50px
+                                height: 50px
+                                padding-left: 37%
+                                padding-top: 25%
+                                color: $white   
+                                transition: 0.4s
+                                border: 1px solid $red
+                                &:hover
+                                    background-color: $white
+                                    color: $red
+                                    border-color: $red
+
+section.categories
+    padding-bottom: 20px
+    .categories-list.uk-grid-small
+        .uk-grid-margin
+            margin-top: 0.2px
+            padding-left: 0.2px
+        .categories-list-type
+            padding-left: 0.2px
+            .uk-text-center
+                background-color: $white             
+                padding: 10px
+                border-radius: 5px
+                border: 1px solid $gray
+                color: $font-gray
+                transition: 0.4s
+                &:hover
+                    color: $red
+                    text-decoration: none
+                    z-index: 100
+                    background-color: $gray
+                i
+                    margin-top: 12%
+                p
+                    font-size: 15px
+                    font-family: "Myriad Pro", sans-serif
+
+section.barter
+    .uk-grid
+        .star
+           text-align: center
+           a
+                transition: 0.4s
+                &:hover
+                    text-decoration: none
+                span.common-text
+                    font-size: 16px
+                    text-transform: uppercase
+                    font-weight: bold
+                    padding-bottom: 2px
+                .uk-button-text:before
+                    border-bottom: 2px solid $font-gray
+section.tasks
+    padding-bottom: 70px
+    .slider
+        .uk-position-relative
+            ul
+                li
+            a.uk-position-small
+                margin: 0
+            a.uk-slidenav-next
+                padding: 5px 0px
+                svg
+                    color: $font-gray          
+// --- modal windows ---
+#login
+    .uk-modal-dialog
+        width: 420px
+        h3
+            font-size: 35px
+            font-family: "Myriad Pro", sans-serif
+            color: $black
+            padding-bottom: 30px
+            position: relative
+            &:before
+                position: absolute
+                content: ""
+                background: $font
+                height: 2px
+                width: 40px
+                top: 60px
+                bottom: 0
+                left: 46%
+                right: 0
+        form
+            .uk-margin
+                .uk-inline
+                    input
+                        transition: 0.4s
+                        border-radius: 3px
+                        border: 1px solid $gray
+                        border-radius: 3px
+                        &:hover
+                            border: 1px solid $font-gray
+                        &:focus
+                            border: 1px solid $font-gray
+                    textarea
+                        transition: 0.4s
+                        border-radius: 3px
+                        border: 1px solid $gray
+                        border-radius: 3px
+                        &:hover
+                            border: 1px solid $font-gray
+                        &:focus
+                            border: 1px solid $font-gray    
+
+            button
+                border-radius: 3px
+                transition: 0.4s
+                font-size: 10px
+                font-family: "Myriadd Pro", sans serif
+                font-weight: bold
+                color: $white
+                &:hover
+                    background-color: transparent
+                span
+                    margin-right: 3px
+                    svg
+                        color: $white
+            .fb
+                background-color: #3b5999
+                border: 1px solid #3b5999
+                &:hover
+                    color: #3b5999
+                    span
+                        svg
+                            color: #3b5999
+            .gp
+                background-color: #de4b39
+                border: 1px solid #de4b39
+                &:hover
+                    color: #de4b39
+                    span
+                        svg
+                           color: #de4b39 
+            .log-in
+                background-color: $font-gray
+                border: 1px solid $font-gray
+                font-size: 14px
+                &:hover
+                    background-color: $font-gray
+        a
+            color: $font-gray
+            font-size: 18px
+            margin-bottom: 5px
+            transition: 0.4s
+            text-transform: none
+            &:hover
+                text-decoration: none
+        .uk-button-text:before
+            border-bottom: 1px solid $font-gray
+
+
+#register
+    .uk-modal-dialog
+        width: 420px
+        h3
+            font-size: 35px
+            font-family: "Myriad Pro", sans-serif
+            color: $black
+            padding-bottom: 30px
+            position: relative
+            &:before
+                position: absolute
+                content: ""
+                background: $font
+                height: 2px
+                width: 40px
+                top: 60px
+                bottom: 0
+                left: 46%
+                right: 0
+        form
+            .uk-margin
+                .uk-inline
+                    input
+                        transition: 0.4s
+                        border-radius: 3px
+                        border: 1px solid $gray
+                        border-radius: 3px
+                        &:hover
+                            border: 1px solid $font-gray
+                        &:focus
+                            border: 1px solid $font-gray
+       
+            button
+                border-radius: 3px
+                transition: 0.4s
+                font-size: 10px
+                font-family: "Myriadd Pro", sans serif
+                font-weight: bold
+                color: $white
+                &:hover
+                    background-color: transparent
+                span
+                    margin-right: 3px
+                    svg
+                        color: $white
+            .fb
+                background-color: #3b5999
+                border: 1px solid #3b5999
+                &:hover
+                    color: #3b5999
+                    span
+                        svg
+                            color: #3b5999
+            .gp
+                background-color: #de4b39
+                border: 1px solid #de4b39
+                &:hover
+                    color: #de4b39
+                    span
+                        svg
+                           color: #de4b39 
+            .log-in
+                background-color: $font-gray
+                border: 1px solid $font-gray
+                font-size: 14px
+                &:hover
+                    background-color: $font-gray
+        a
+            color: $font-gray
+            font-size: 18px
+            margin-bottom: 5px
+            transition: 0.4s
+            text-transform: none
+            &:hover
+                text-decoration: none
+        .uk-button-text:before
+            border-bottom: 1px solid $font-gray
+
+#create
+    .uk-modal-dialog
+        width: 420px
+        h3
+            font-size: 35px
+            font-family: "Myriad Pro", sans-serif
+            color: $black
+            padding-bottom: 30px
+            position: relative
+            &:before
+                position: absolute
+                content: ""
+                background: $font
+                height: 2px
+                width: 40px
+                top: 60px
+                bottom: 0
+                left: 46%
+                right: 0
+        form
+            .uk-margin
+                .uk-inline
+                    input
+                        transition: 0.4s
+                        border-radius: 3px
+                        border: 1px solid $gray
+                        border-radius: 3px
+                        &:hover
+                            border: 1px solid $font-gray
+                        &:focus
+                            border: 1px solid $font-gray
+            button
+                border-radius: 3px
+                transition: 0.4s
+                font-size: 10px
+                font-family: "Myriadd Pro", sans serif
+                font-weight: bold
+                color: $white
+                &:hover
+                    background-color: transparent
+                span
+                    margin-right: 3px
+                    svg
+                        color: $white
+ 
+            .log-in
+                background-color: $font-gray
+                border: 1px solid $font-gray
+                font-size: 14px
+                &:hover
+                    background-color: $font-gray
+        a
+            color: $font-gray
+            font-size: 18px
+            margin-bottom: 5px
+            transition: 0.4s
+            text-transform: none
+            &:hover
+                text-decoration: none
+        .uk-button-text:before
+            border-bottom: 1px solid $font-gray            
+
+
+
+
+/*-----------------------------------------------------------------------------------
+/*	CONTACT
+/*-----------------------------------------------------------------------------------
+.contact
+    padding: 0 120px 0 120px
+
+.contact__p 
+    font-size: 14px    
+.contact__h3
+    margin-top: -10px 
+
+.contact__icon
+    font-size: 14px
+    margin-left: 15px       
+
+textarea, input[type="text"]
+  width: 500px
+  margin: 0 1px 4px 0
+  margin-top: 0 !important
+  padding: 10px 20px
+  text-transform: none
+  font-family: 'Source Sans Pro', sans-serif
+  font-weight: 400
+  line-height: 18px
+  font-size: 13px
+  color: #666
+  font-style: normal
+  border-radius: 0
+  background: none
+  border: 1px solid #ddd
+  box-shadow: none
+  transition: all 0.3s ease-in-out
+  -webkit-transition: all 0.3s ease-in-out
+
+textarea
+  overflow: hidden
+  min-height: 95px
+  resize: none
+  width: 500px
+  margin-right: 0
+
+input[type="text"].last
+  margin-right: 0
+
+textarea:focus
+  outline: 0
+  box-shadow: none
+  border: 1px solid #ddd
+
+input
+  &[type="text"]:focus
+    outline: 0
+    box-shadow: none
+    border: 1px solid #ddd
+  &[type="submit"], &[type="reset"]
+    display: block
+    cursor: pointer
+    margin: 0
+    padding: 0 13px
+    border: 0
+    border-radius: 0
+    box-shadow: 0
+    text-align: center
+    text-shadow: none
+    text-decoration: none
+    text-transform: uppercase
+    font-family: 'Source Sans Pro', sans-serif
+    font-weight: 400
+    line-height: 21px
+    font-size: 13px
+    color: #c5c5c5
+    background: #3d3d3d
+    transition: all 0.3s ease-in-out
+    -webkit-transition: all 0.3s ease-in-out
+
+.contact_btn:hover
+  background: none
+  color: #f05f44
+
+.contact_form label
+  display: none
+  font-weight: 400
+  text-align: left
+  color: #5f5f5f
+
+.ie .contact_form label
+  display: block
+
+/* form valid style
+
+.notification_error
+  border-radius: 5px
+  -webkit-border-radius: 5px
+  margin: 2px 0 13px 0
+  padding: 12px 10px 12px 35px
+  position: relative
+
+.notification_ok
+  border-radius: 5px
+  -webkit-border-radius: 5px
+  margin: 2px 0 13px 0
+  padding: 12px 10px 12px 35px
+  position: relative
+  border: 1px #038bd4 solid
+  color: #038bd4
+  background: #d0e3ea
+
+.notification_error
+  border: 1px #c93119 solid
+  color: #c93119
+  background: #ffcfcf
+  &:before
+    content: ''
+    width: 16px
+    height: 16px
+    position: absolute
+    left: 11px
+    top: 13px
+    background-position: 0 0
+    background-repeat: no-repeat
+
+.notification_ok:before
+  content: ''
+  width: 16px
+  height: 16px
+  position: absolute
+  left: 11px
+  top: 13px
+  background-position: 0 0
+  background-repeat: no-repeat
+
+
+
+/* __________ Footer Get in Touch __________
+
+footer
+  input[type="text"]
+    margin: 0 0 4px
+    padding: 6px 10px 5px
+    width: 100%
+    height: 31px
+    font-size: 12px
+    color: #9a9a9a
+    background-color: rgba(255, 255, 255, 0.14)
+    border: 0
+  textarea
+    margin: 0 0 4px
+    padding: 6px 10px 5px
+    width: 100%
+    height: 31px
+    font-size: 12px
+    color: #9a9a9a
+    background-color: rgba(255, 255, 255, 0.14)
+    border: 0
+    min-height: 110px
+  input[type="text"]:focus, textarea:focus
+    border: 0
+  input[type="submit"]
+    width: auto
+    height: 25px
+    padding: 2px 13px 1px
+    text-transform: uppercase
+    font-weight: 900
+    font-size: 13px
+    color: #fff
+    border: 1px solid #fff
+    background-color: rgba(255, 255, 255, 0.36)
+    &:hover
+      background-color: rgba(255, 255, 255, 0.16)
+
+
+.contact__btn__clear   
+    color: #fff
+    background-color: #505050
+    margin-top: 0
+    margin-right: 5px 
+
+.contact__btn__send
+    margin-top: 0
+    color: #333
+    background-color: #aeaeae    
+
+
+.breadcrumb
+    color: #fff
+    background-color: #505050
+    padding: 40px 0
+
+.contact__breadcrumb
+    padding-left: 850px
+
+.uk-breadcrumb>:last-child>* 
+    color: #fff   
+
+.contact__right
+    padding-left: 100px            
+
+
+/*-----------------------------------------------------------------------------------
+/*	CONTACT END
+/*-----------------------------------------------------------------------------------
+
+
+/*-----------------------------------------------------------------------------------
+/*	ABOUT
+/*-----------------------------------------------------------------------------------
+
+.about__right__text
+    font-size: 16px
+
+.team__members__item
+    background: #fff
+    color: #666
+    box-shadow: 0 5px 15px rgba(0,0,0,.08)
+    padding: 11px
+
+    &__desc
+        font-size: 14px
+        margin-top: -18px
+        margin-bottom: 10px
+
+.uk-card-body_mod
+    padding: 60px !important         
+
+
+/*-----------------------------------------------------------------------------------
+/*	ABOUT END
+/*-----------------------------------------------------------------------------------
+
+/*-----------------------------------------------------------------------------------
+/*	PROFILE END
+/*-----------------------------------------------------------------------------------
+.profile__img   
+    background: #fff
+    color: #666
+    box-shadow: 0 5px 15px rgba(0,0,0,.08)
+    padding: 11px
+
+.profile__desc
+    font-size: 14px
+    background-color: #a8a8a8
+    padding-top: 20px
+    padding-bottom: 1px
+    color: #fff
+    &__choose
+        padding: 20px 85px
+
+
+section.items
+    .uk-grid
+        .star
+           text-align: center
+           a
+                transition: 0.4s
+                &:hover
+                    text-decoration: none
+                span.common-text
+                    font-size: 16px
+                    text-transform: uppercase
+                    font-weight: bold
+                    padding-bottom: 2px
+                .uk-button-text:before
+                    border-bottom: 2px solid $font-gray
+.profile
+    &__view 
+        font-size: 16px
+        text-decoration: none
+        color: $font-gray
+        &__first
+            font-size: 26px
+        &__space
+            padding-right: 10px
+            &:hover
+                text-decoration: none
+        &__title
+            font-weight: bold
+            font-size: 18px  
+    &__tab
+        background-color: #fff
+        padding: 30px 35px 45px 40px
+        border: 1px solid #ddd
+        &__head
+            text-transform: none !important
+            font-size: 16px !important
+            padding: 15px 10px !important
+    &__ul
+        margin-top: -20px !important   
+
+    &__fb
+        margin-bottom: 10px
+        background-color: #3b5999
+        border: 1px solid #3b5999
+        font-size: 14px
+        text-transform: none
+        color: #fff
+        border-radius: 5px
+      
+        &:hover
+            color: #3b5999
+            span
+                svg
+                    color: #3b5999
+    &__google      
+        background-color: #de4b39
+        border: 1px solid #de4b39
+        border-radius: 5px
+        color: #fff
+        &:hover
+            color: #de4b39
+            span
+                svg
+                    color: #de4b39
+    &__twitter
+        margin-top: 10px
+        background-color: #00aced
+        font-size: 14px
+        text-transform: none
+        color: #fff
+        border-radius: 5px
+      
+        &:hover
+            color: #3b5999
+            span
+                svg
+                    color: #00aced                               
+
+.profile__tab input[type=text]
+    width: 211px  
+
+     
+            
+      
+
+   
+/*-----------------------------------------------------------------------------------
+/*	PROFILE END
+/*-----------------------------------------------------------------------------------
+/*-----------------------------------------------------------------------------------
+/*	PROFILE VIEW START
+/*-----------------------------------------------------------------------------------
+
+.profile__view__tab
+    padding-left: 40px
+    &__head
+        text-transform: none !important
+        font-size: 16px !important
+        padding: 15px 10px !important
+.profile__desc
+    max-width: 272px
+
+// ---categories ----
+.uk-search-navbar .uk-search-input 
+    font-size: 1.2rem
+    
+.navbar
+    height: 60px !important
+.menu
+    .find-category
+        div.find
+            background: $white
+            padding: 20px 10px 10px 10px
+            input.finding
+                border-radius: 10px
+                outline: none
+        div.checks
+            background-color: #f9f9f9
+            padding: 10px 10px 10px 10px
+            label
+                font-size: 13px
+                color: $font-gray
+            input
+                outline: none
+        div.submit
+            background-color: $white
+            padding: 0 10px 20px 10px
+            button
+                font-size: 13px
+                text-transform: none
+                border-radius: 10px
+                border: 1px solid $red
+                background-color: $red
+                color: $white
+                font-weight: bolder
+                transition: 0.4s
+                &:hover
+                    color: $font-gray
+                    background-color: transparent
+                    border-color: $font-gray
+.uk-panel
+    .uk-card
+        background-color: $white
+        padding: 30px
+        border: 1px solid $gray
+        .image
+            width: 100px
+            height: 100px
+            margin: 0 auto
+            margin-bottom: 20px
+            border: 5px solid $gray
+        .text
+            h3.common-text
+                color: $black
+                font-size: 16px
+                font-weight: bold
+                position: relative
+                &:before
+                    content: " "
+                    background: $black
+                    width: 2px
+                    height: 3px
+                    top: 0
+                    bottom: 0
+                    right: 0
+                    left: 0
+            p.common-text
+                color: $black
+                font-size: 14px
+        .time
+            span
+                color: $font-gray
+                font-size: 14px
+                margin-left: 5px
+    .watch.uk-card-footer
+        background-color: $font-gray
+        transition: 0.4s
+        text-align: center
+        &:hover
+            background-color: $red
+            a
+                text-decoration: none
+                color: $white
+        a
+            font-weight: bold
+            font-size: 16px
+            font-family: "Myriad Pro", sans serif
+            text-transform: uppercase
+            color: $white
+
+.categories
+    .search-ingine
+        nav
+            background-color: $white
+            .uk-navbar-right
+                .uk-navbar-item
+                    background-color: $red
+                    padding: 0 30px
+                    a
+                        svg
+                            color: $white
+
+// media
+.radio_text 
+    font-size: 14px
+    color: #666
+textarea
+    transition: 0.4s
+    border-radius: 3px
+    border: 1px solid $gray
+    border-radius: 3px
+    &:hover
+        border: 1px solid $font-gray
+    &:focus
+        border: 1px solid $font-gray     
+
+/*---------------------------------------------------------------------------------—
+/*  ADMIN PANEL
+/*---------------------------------------------------------------------------------—
+ 
+.admin-head
+    .uk-container
+        nav.uk-navbar-container
+            .uk-navbar-left
+                ul
+                    li
+                        a
+                            font-size: 18px
+                            color: $font-gray
+                            font-family: "Myriad Pro", sans-serif
+                            text-transform: none
+                            transition: 0.4s
+                            &:hover
+                                color: $red
+            .uk-navbar-center
+                ul
+                    li
+                        a
+                            font-size: 60px
+                            font-family: "Pacifico-Regular"
+                            color: $red
+                            text-transform: none
+            .uk-navbar-right
+                ul
+                    li
+                        a
+                            font-size: 18px
+                            color: $font-gray
+                            font-family: "Myriad Pro", sans-serif
+                            text-transform: none
+                            transition: 0.4s
+                            &:hover
+                                color: $red
+.admin-crud
+    ul.uk-subnav-pill
+        li
+            a
+                font-size: 18px
+                color: $font-gray
+                font-family: "Myriad Pro", sans-serif
+                text-transform: none
+                transition: 0.4s
+                border-radius: 5px
+                &:hover
+                    background-color: $red
+                    color: $white
+        li.uk-active
+            a
+                color: $white
+                background-color: $red
+    ul.uk-switcher
+        section.categories
+            .uk-container
+                .categories-list
+                    .categories-list-type
+                        a
+                            .uk-button
+                                padding: 0 10px
+                                font-size: 14px
+                                font-family: "Myriad Pro", sans-serif
+                                color: $font-gray
+                                text-transform: none
+                                border: 1px solid transparent
+                                &:hover
+                                    color: $red
+.add-admin
+    div.uk-modal-dialog
+        width: 470px
+        form
+            .uk-margin
+                button
+                    margin-left: 328px
+                    &:hover
+                        color: $white
+                        background-color: $red
+                        border-color: $red
+                input
+                    width: 540px
+
+table
+    background: $white
+    width: 100%
+    border: 1px solid $font-gray
+    td 
+        font-family: sans-serif
+        font-size: 14px
+        vertical-align: top
+        border: 1px solid $font-gray
+        .image
+            width: 50px
+            img
+                margin-left: 55%
+
+ 
+@import 'assets/_media'

@@ -1,0 +1,29 @@
+doctype
+html(lang="ru")
+	head
+		include assets/_metas.pug
+		include assets/_links.pug
+		link(rel="stylesheet", href="stylesheets/style.min.css")
+	body
+		include assets/_header.pug
+		section.categories.uk-margin-top(id="categories")
+			.heading.uk-text-center.uk-margin-medium-bottom
+				h2.com-header Категории услуг:
+			.uk-container.uk-container-small.uk-margin-large-top
+				.categories-list.uk-grid.uk-grid-small.uk-grid-match(uk-grid, class = "uk-child-width-1-4@s")
+					each val in category
+						.categories-list-type
+							span.uk-text-center.uk-box-shadow-hover-large
+								i(class=""+val.value.style)
+								p #{val.value.name}
+								button(name=""+val.id onclick="update('"+val.id+"')" ) обновить
+								button(name=""+val.id onclick="del('"+val.id+"')") удалить
+					
+					.categories-list-type
+						span.uk-text-center.uk-box-shadow-hover-large
+							i.zmdi.zmdi-plus-circle.zmdi-hc-5x
+							button( onclick="add()" ) добавить
+		include assets/_footer.pug
+		include assets/_scripts.pug
+		
+			

@@ -1,0 +1,94 @@
+footer
+    background: #2a2a2a
+    padding-top: 10px
+    .top-line
+        nav
+            .uk-navbar-left
+                ul
+                    li
+                        a
+                            color: $font
+                            font-size: 12px
+                            font-family: "Myriad Pro", sans serif
+                            font-weight: bold
+                            transition: 0.4s
+                            position: relative
+                            &:hover
+                                color: $white
+                            &:before
+                                position: absolute
+                                content: " "
+                                background: $font
+                                width: 1px
+                                height: 17px
+                                top: 30px
+                                left: 0
+                                right: 0
+                                bottom: 0
+                        a.main:before
+                            background: none
+                            width: 0
+                    .uk-active
+                        a
+                            color: $white
+            .uk-navbar-right
+                ul
+                    li
+                        a
+                            color: $white
+                            font-size: 14px
+                            font-family: "Myriad Pro", sans serif
+                            font-weight: bold
+                            &:hover
+                                color: $white
+    .middle-line
+        nav
+            ul
+                li
+                    a
+                        span.icon
+                            margin-right: 5px
+                        span
+                            font-size: 16px
+                            color: $font
+                            font-family: "Myriad Pro", sans serif
+            a.uk-icon-button
+                transition: 0.4s
+                &:hover
+                    svg
+                        color: $red
+    .bottom-line
+        p
+            font-size: 12px
+            color: $font
+    hr
+        border-color: $font
+
+.footer__navbar   
+    list-style-type: none
+    display: inline-block
+    margin-left: -30px
+
+.footer__navbar__a 
+    margin-right: 10px
+
+.footer__navbar__a:hover    
+    text-decoration: none
+   
+
+.navbar__hr__m
+    width: 580px
+    display: inline-block
+
+.navbar__hr__s
+    margin-left: 90px
+    width: 520px
+    display: inline-block 
+     
+            
+.footer__bottom
+    padding: 5px
+
+.footer__hr
+    margin-top: 50px    
+

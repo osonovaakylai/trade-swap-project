@@ -1,0 +1,118 @@
+doctype
+html(lang="ru")
+    head
+        include assets/_metas.pug
+        include assets/_links.pug
+    body
+        include assets/_header.pug
+            
+        section.about
+            .uk-container
+                div(uk-grid='', class='uk-child-width-1-2@l uk-child-width-1-1')
+                    div.about__left.uk-margin-large-top.uk-margin-large-bottom(uk-slideshow='autoplay:true; autoplay-interval: 2000')
+                        .uk-position-relative.uk-visible-toggle.uk-light
+                            ul.uk-slideshow-items
+                                li
+                                    img(src='images/jpg/sl1.jpg', alt='', uk-cover='')
+                                li
+                                    img(src='images/jpg/sl2.jpg', alt='', uk-cover='')
+                                li
+                                    img(src='images/jpg/sl3.jpg', alt='', uk-cover='')
+                                li
+                                    img(src='images/jpg/sl4.jpg', alt='', uk-cover='')
+                            a.uk-position-center-left.uk-position-small.uk-hidden-hover(href='#', uk-slidenav-previous='', uk-slideshow-item='previous')
+                            a.uk-position-center-right.uk-position-small.uk-hidden-hover(href='#', uk-slidenav-next='', uk-slideshow-item='next')
+                        ul.uk-slideshow-nav.uk-dotnav.uk-flex-center.uk-margin
+                    div  
+                        div.about__right.uk-margin-large-top.uk-margin-large-bottom
+                            h2.com-header О нас
+                            p.about__right__text Компания Trade занимается разработкой долгосрочных стартап-проектов, которые развиваются на протяжении уже многих лет и являются успешными в своем направлении. Нашими клиентами являются компании из нефтегазовой отрасли, здравоохранения, облачных технологий, продвижения малого и среднего бизнеса. Партнерство с ними подкреплено высококлассной предоставляемой продукцией.
+                            p.about__right__text На сегодняшний день нас уже более 140 человек, и мы ведем несколько крупных проектов в различных областях на протяжении 8 лет. И у нас еще много интересных идей!
+        section.team.uk-margin-large-bottom
+            .uk-container
+                h2.com-header.uk-text-center.uk-margin-large-bottom Наша команда
+                .team__members.uk-text-center.uk-margin-small-bottom(class="uk-child-width-1-4@l uk-child-width-1-3@m uk-child-width-1-2@s uk-child-width-1-1", uk-grid='')
+                    div
+                        .team__members__item
+                            img(src="images/jpg/Aki.jpg", alt="")
+                        p ОСОНОВА АКЫЛАЙ
+                        p.team__members__item__desc Front-end Developer
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='twitter')
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='facebook')
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='twitter')
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='facebook')
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='twitter')
+                    div
+                        .team__members__item
+                            img(src="images/jpg/Begi.jpg", alt="")
+                        p АСАНБЕКОВА БЕГИМАЙ
+                        p.team__members__item__desc Front-end Developer
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='twitter')
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='facebook')
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='twitter')
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='facebook')
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='twitter')
+                    div
+                        .team__members__item
+                            img(src="images/jpg/Kylych.jpg", alt="")
+                        p АСАНКУЛОВ КЫЛЫЧ
+                        p.team__members__item__desc Back-end Developer
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='twitter')
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='facebook')
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='twitter')
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='facebook')
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='twitter')
+                    div
+                        .team__members__item
+                            img(src="images/jpg/Atay.jpg", alt="")
+                        p СУЛТАНГАЗИЕВ АТАЙ
+                        p.team__members__item__desc IOS Developer
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='twitter')
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='facebook')
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='twitter')
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='facebook')
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='twitter')
+                    div
+                        .team__members__item
+                            img(src="images/jpg/Arlen.jpg", alt="")
+                        p НУРЛАНБЕКОВ АРЛЕН
+                        p.team__members__item__desc Back-end Developer
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='twitter')
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='facebook')
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='twitter')
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='facebook')
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='twitter')
+
+                    div
+                        .team__members__item
+                            img(src="images/jpg/Tala.jpg", alt="")
+                        p АСАНБАЕВ ТАЛГАТ
+                        p.team__members__item__desc Android Developer
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='twitter')
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='facebook')
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='twitter')
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='facebook')
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='twitter')
+                    div
+                        .team__members__item
+                            img(src="images/jpg/Orhan.jpg", alt="")
+                        p АЛИЕВ ОРХАН
+                        p.team__members__item__desc Tester
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='twitter')
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='facebook')
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='twitter')
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='facebook')
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='twitter')
+                    div
+                        .team__members__item
+                            img(src="images/jpg/Dan.jpg", alt="")
+                        p КУРМАНАЛИЕВ ДАНИЕЛЬ
+                        p.team__members__item__desc Universal Developer
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='twitter')
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='facebook')
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='twitter')
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='facebook')
+                        a.uk-icon-button.uk-margin-small-right(href='', uk-icon='twitter')
+
+        include assets/_footer.pug
+        include assets/_scripts.pug

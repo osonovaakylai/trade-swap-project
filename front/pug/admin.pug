@@ -1,0 +1,328 @@
+doctype
+html(lang="ru")
+    head
+        include assets/_metas.pug
+        include assets/_links.pug
+    body
+        .admin-head.uk-box-shadow-medium(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar")
+            .uk-container
+                nav.uk-navbar-container(uk-navbar style="position: relative; z-index: 980;")
+                    .uk-navbar-left
+                        ul.uk-navbar-nav
+                            li
+                                a(href="index.html") Главная
+                    .uk-navbar-center
+                        ul.uk-navbar-nav
+                            li.uk-active
+                                a(href="index.html") Trade
+                    .uk-navbar-right
+                        ul.uk-navbar-nav
+                            li
+                                a(href="index.html") Выход
+        .uk-container
+            .admin-crud.uk-margin-large-top
+                ul.uk-subnav.uk-subnav-pill(uk-switcher)
+                    li
+                        a(href="#") Категории
+                    li
+                        a(href="#") Задания
+                    li
+                        a(href="#") Пользователи
+                ul.uk-switcher.uk-margin
+                    li
+                        section.categories.uk-margin-top
+                            .heading.uk-text-center.uk-margin-medium-bottom
+                                h2.com-header Категории:
+                            .uk-container.uk-container-small.uk-margin-large-top
+                                .categories-list.uk-grid.uk-grid-small.uk-grid-match(uk-grid, class = "uk-child-width-1-4@s")
+                                    .categories-list-type
+                                        a.uk-text-center.uk-box-shadow-hover-large(href="#")
+                                            i.zmdi.zmdi-female.zmdi-hc-2x
+                                            p Красота
+                                            .crud
+                                                button.uk-button.uk-button-default(href="#change", uk-toggle) Изменить
+                                                span |
+                                                button.uk-button.uk-button-default Удалить
+                                    .categories-list-type
+                                        a.uk-text-center.uk-box-shadow-hover-large(href="#")
+                                            i.zmdi.zmdi-hospital.zmdi-hc-2x
+                                            p Медицина
+                                            button.uk-button.uk-button-default(href="#change", uk-toggle) Изменить
+                                            span |
+                                            button.uk-button.uk-button-default Удалить
+                                    .categories-list-type
+                                        a.uk-text-center.uk-box-shadow-hover-large(href="#")
+                                            i.zmdi.zmdi-graduation-cap.zmdi-hc-2x
+                                            p Образование
+                                            button.uk-button.uk-button-default(href="#change", uk-toggle) Изменить
+                                            span |
+                                            button.uk-button.uk-button-default Удалить
+                                    .categories-list-type
+                                        a.uk-text-center.uk-box-shadow-hover-large(href="#")
+                                            i.zmdi.zmdi-male-female.zmdi-hc-2x
+                                            p Ремонт личных вещей
+                                            button.uk-button.uk-button-default(href="#change", uk-toggle) Изменить
+                                            span |
+                                            button.uk-button.uk-button-default Удалить
+                                    .categories-list-type
+                                        a.uk-text-center.uk-box-shadow-hover-large(href="#")
+                                            i.zmdi.zmdi-home.zmdi-hc-2x
+                                            p Работы по дому
+                                            button.uk-button.uk-button-default(href="#change", uk-toggle) Изменить
+                                            span |
+                                            button.uk-button.uk-button-default Удалить
+                                    .categories-list-type
+                                        a.uk-text-center.uk-box-shadow-hover-large(href="#")
+                                            i.zmdi.zmdi-cake.zmdi-hc-2x
+                                            p Организация мероприятий
+                                            button.uk-button.uk-button-default(href="#change", uk-toggle) Изменить
+                                            span |
+                                            button.uk-button.uk-button-default Удалить
+                                    .categories-list-type
+                                        a.uk-text-center.uk-box-shadow-hover-large(href="#")
+                                            i.zmdi.zmdi-balance.zmdi-hc-2x
+                                            p Профессиональные услуги
+                                            button.uk-button.uk-button-default(href="#change", uk-toggle) Изменить
+                                            span |
+                                            button.uk-button.uk-button-default Удалить
+                                    .categories-list-type
+                                        a.uk-text-center.uk-box-shadow-hover-large(href="#")
+                                            i.zmdi.zmdi-bus.zmdi-hc-2x
+                                            p Ремонт авто
+                                            button.uk-button.uk-button-default(href="#change", uk-toggle) Изменить
+                                            span |
+                                            button.uk-button.uk-button-default Удалить
+                                    .categories-list-type
+                                        a.uk-text-center.uk-box-shadow-hover-large(href="#")
+                                            i.zmdi.zmdi-flash.zmdi-hc-2x
+                                            p Электроприборы
+                                            button.uk-button.uk-button-default(href="#change", uk-toggle) Изменить
+                                            span |
+                                            button.uk-button.uk-button-default Удалить
+                                    .categories-list-type
+                                        a.uk-text-center.uk-box-shadow-hover-large(href="#")
+                                            i.zmdi.zmdi-collection-image-o.zmdi-hc-2x
+                                            p Фото, видео, аудио
+                                            button.uk-button.uk-button-default(href="#change", uk-toggle) Изменить
+                                            span |
+                                            button.uk-button.uk-button-default Удалить
+                                    .categories-list-type
+                                        a.uk-text-center.uk-box-shadow-hover-large(href="#")
+                                            i.zmdi.zmdi-run.zmdi-hc-2x
+                                            p Спорт
+                                            button.uk-button.uk-button-default(href="#change", uk-toggle) Изменить
+                                            span |
+                                            button.uk-button.uk-button-default Удалить
+                                    .categories-list-type
+                                        a.uk-text-center.uk-box-shadow-hover-large(href="#")
+                                            i.zmdi.zmdi-wrench.zmdi-hc-2x
+                                            p Строительство и ремонт
+                                            button.uk-button.uk-button-default(href="#change", uk-toggle) Изменить
+                                            span |
+                                            button.uk-button.uk-button-default Удалить
+                                    .categories-list-type
+                                        a.uk-text-center.uk-box-shadow-hover-large(href="#add", uk-toggle)
+                                            i.zmdi.zmdi-plus-circle.zmdi-hc-2x
+                                            p Добавить
+                    li
+                        .categories
+                            .heading.uk-text-center.uk-margin-medium-bottom
+                                    h2.com-header Задания:
+                            .uk-grid.uk-grid-match.uk-margin-large-top(class="uk-child-width-1-4@m uk-child-width-1-2@s", uk-grid)
+                                .uk-panel
+                                    .uk-card.uk-card-body
+                                        .image.uk-card-media-top.uk-border-circle.uk-position-relative.uk-cover-container
+                                            img(src="img/png/otziv1.png", alt="", uk-cover)
+                                        .text.uk-text-center
+                                            h3.common-text Образование
+                                            p.common-text Требуется частный репетитор английского языка на дом
+                                        .time.uk-text-center
+                                            img(src="img/png/date.png", alt="")
+                                            span 14.02.2018
+                                    .watch.uk-card-footer
+                                        a(href="profile_view.html") Посмотреть
+                                .uk-panel
+                                    .uk-card.uk-card-body
+                                        .image.uk-card-media-top.uk-border-circle.uk-position-relative.uk-cover-container
+                                            img(src="img/png/otziv2.png", alt="", uk-cover)
+                                        .text.uk-text-center
+                                            h3.common-text Образование
+                                            p.common-text Требуется частный репетитор английского языка на дом
+                                        .time.uk-text-center
+                                            img(src="img/png/date.png", alt="")
+                                            span 14.02.2018
+                                    .watch.uk-card-footer
+                                        a(href="profile_view.html") Посмотреть
+                                .uk-panel
+                                    .uk-card.uk-card-body
+                                        .image.uk-card-media-top.uk-border-circle.uk-position-relative.uk-cover-container
+                                            img(src="img/png/otziv3.png", alt="", uk-cover)
+                                        .text.uk-text-center
+                                            h3.common-text Образование
+                                            p.common-text Требуется частный репетитор английского языка на дом
+                                        .time.uk-text-center
+                                            img(src="img/png/date.png", alt="")
+                                            span 14.02.2018
+                                    .watch.uk-card-footer
+                                        a(href="profile_view.html") Посмотреть
+                                .uk-panel
+                                    .uk-card.uk-card-body
+                                        .image.uk-card-media-top.uk-border-circle.uk-position-relative.uk-cover-container
+                                            img(src="img/png/otziv1.png", alt="", uk-cover)
+                                        .text.uk-text-center
+                                            h3.common-text Образование
+                                            p.common-text Требуется частный репетитор английского языка на дом
+                                        .time.uk-text-center
+                                            img(src="img/png/date.png", alt="")
+                                            span 14.02.2018
+                                    .watch.uk-card-footer
+                                        a(href="profile_view.html") Посмотреть
+                                .uk-panel
+                                    .uk-card.uk-card-body
+                                        .image.uk-card-media-top.uk-border-circle.uk-position-relative.uk-cover-container
+                                            img(src="img/png/otziv2.png", alt="", uk-cover)
+                                        .text.uk-text-center
+                                            h3.common-text Образование
+                                            p.common-text Требуется частный репетитор английского языка на дом
+                                        .time.uk-text-center
+                                            img(src="img/png/date.png", alt="")
+                                            span 14.02.2018
+                                    .watch.uk-card-footer
+                                        a(href="profile_view.html") Посмотреть
+                                .uk-panel
+                                    .uk-card.uk-card-body
+                                        .image.uk-card-media-top.uk-border-circle.uk-position-relative.uk-cover-container
+                                            img(src="img/png/otziv3.png", alt="", uk-cover)
+                                        .text.uk-text-center
+                                            h3.common-text Образование
+                                            p.common-text Требуется частный репетитор английского языка на дом
+                                        .time.uk-text-center
+                                            img(src="img/png/date.png", alt="")
+                                            span 14.02.2018
+                                    .watch.uk-card-footer
+                                        a(href="profile_view.html") Посмотреть
+                                .uk-panel
+                                    .uk-card.uk-card-body
+                                        .image.uk-card-media-top.uk-border-circle.uk-position-relative.uk-cover-container
+                                            img(src="img/png/otziv1.png", alt="", uk-cover)
+                                        .text.uk-text-center
+                                            h3.common-text Образование
+                                            p.common-text Требуется частный репетитор английского языка на дом
+                                        .time.uk-text-center
+                                            img(src="img/png/date.png", alt="")
+                                            span 14.02.2018
+                                    .watch.uk-card-footer
+                                        a(href="profile_view.html") Посмотреть
+                                .uk-panel
+                                    .uk-card.uk-card-body
+                                        .image.uk-card-media-top.uk-border-circle.uk-position-relative.uk-cover-container
+                                            img(src="img/png/otziv2.png", alt="", uk-cover)
+                                        .text.uk-text-center
+                                            h3.common-text Образование
+                                            p.common-text Требуется частный репетитор английского языка на дом
+                                        .time.uk-text-center
+                                            img(src="img/png/date.png", alt="")
+                                            span 14.02.2018
+                                    .watch.uk-card-footer
+                                        a(href="profile_view.html") Посмотреть
+                                .uk-panel
+                                    .uk-card.uk-card-body
+                                        .image.uk-card-media-top.uk-border-circle.uk-position-relative.uk-cover-container
+                                            img(src="img/png/otziv3.png", alt="", uk-cover)
+                                        .text.uk-text-center
+                                            h3.common-text Образование
+                                            p.common-text Требуется частный репетитор английского языка на дом
+                                        .time.uk-text-center
+                                            img(src="img/png/date.png", alt="")
+                                            span 14.02.2018
+                                    .watch.uk-card-footer
+                                        a(href="profile_view.html") Посмотреть
+                    li
+                        .users
+                            .heading.uk-text-center.uk-margin-medium-bottom
+                                h2.com-header Пользователи:
+                            //- .uk-grid.uk-grid-match(uk-grid)
+                            //-     .img(class="uk-width-1-5@s")
+                            //-         .image.uk-card-media-top.uk-border-circle.uk-position-relative.uk-cover-container
+                            //-             img(src="img/png/otziv3.png", alt="", uk-cover)
+                            //-     .mail(class="uk-width-1-5@s")
+                            //-         .text.uk-text-center
+                            //-             h3.common-text begi.asanbekova@gmail.com
+                            //-     .name(class="uk-width-1-5@s")
+                            //-         .text.uk-text-center
+                            //-             h3.common-text Begimay
+                            //-     .update(class="uk-width-auto@s")
+                            //-         a(href="#", uk-icon="icon: pencil")
+                            //-     .delete(class="uk-width-auto@s")
+                            //-         a(href="#", uk-icon="icon: trash")
+                            .uk-container.uk-container-small.uk-text-center
+                                table
+                                    tr
+                                        td
+                                            .text
+                                                h3.common-text Аватар
+                                        td
+                                            .text
+                                                h3.common-text E-mail
+                                        td
+                                            .text
+                                                h3.common-text Имя
+                                        td
+                                            .text
+                                                h3.common-text Обновить
+                                        td
+                                            .text
+                                                h3.common-text Удалить
+                                    tr
+                                        td
+                                            .image
+                                                img(src="img/png/otziv3.png", alt="")
+                                        td(style="width: 360px")
+                                            .text
+                                                h3.common-text begi.asanbekova@gmail.com
+                                        td
+                                            .text
+                                                h3.common-text Begimay
+                                        td
+                                            a(href="#", uk-icon="icon: pencil")
+                                        td
+                                            a(href="#", uk-icon="icon: trash")
+
+
+
+
+
+        div.uk-flex-top.add-admin(id="change", uk-modal)
+            div.uk-modal-dialog.uk-modal-body.uk-margin-auto-vertical
+                button.uk-modal-close-default(type="button", uk-close)
+                .uk-margin
+                    form(action="")
+                        h3.common-text.uk-text-center Изменить категорию
+                        .uk-margin
+                            .uk-inline
+                                a.uk-form-icon.uk-form-icon-flip(href="#", uk-icon="icon: pencil")
+                                input.uk-input(type="text", placeholder="Название")
+                        .uk-margin
+                            .uk-inline
+                                a.uk-form-icon.uk-form-icon-flip(href="#", uk-icon="icon: pencil")
+                                input.uk-input(type="text", placeholder="Иконка")
+                        .uk-margin
+                            button.uk-button.uk-button-default OK
+        div.uk-flex-top.add-admin(id="add", uk-modal)
+            div.uk-modal-dialog.uk-modal-body.uk-margin-auto-vertical
+                button.uk-modal-close-default(type="button", uk-close)
+                .uk-margin
+                    form(action="")
+                        h3.common-text.uk-text-center Добавить категорию
+                        .uk-margin
+                            .uk-inline
+                                a.uk-form-icon.uk-form-icon-flip(href="#", uk-icon="icon: pencil")
+                                input.uk-input(type="text", placeholder="Название")
+                        .uk-margin
+                            .uk-inline
+                                a.uk-form-icon.uk-form-icon-flip(href="#", uk-icon="icon: pencil")
+                                input.uk-input(type="text", placeholder="Иконка")
+                        .uk-margin
+                            button.uk-button.uk-button-default OK
+
+        include assets/_scripts.pug

@@ -1,1 +1,1 @@
-Прежде чем коммитить проекты свои назовите их именами типа  Client, Server, Tests, IOS, Android. И не забывайте про .gitignore
+Trade swap project
